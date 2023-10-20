@@ -1,3 +1,9 @@
+python -m venv streamlit-env
+.\streamlit-env\Scripts\activate
+pip install streamlit
+pip install pyspark
+
+
 import streamlit as st
 from pyspark.sql import SparkSession
 from pyspark.ml.classification import GBTClassificationModel
