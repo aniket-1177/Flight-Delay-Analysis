@@ -1,11 +1,11 @@
 import streamlit as st
-from pyspark.ml.classification import GBTClassificationModel
 from pyspark.sql import SparkSession
+from pyspark.ml.classification import GBTClassificationModel
 
-# Create a Spark session
+# Initialize Spark session
 spark = SparkSession.builder.appName("SparkModelApp").getOrCreate()
 
-# Load the saved model
+# Load the saved PySpark model
 gbt_model = GBTClassificationModel.load("gbt_model")
 
 # Create a function to make predictions
